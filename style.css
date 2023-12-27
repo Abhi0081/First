@@ -1,0 +1,164 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body{
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: Poppins;
+    background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+  }
+  .main{
+    height: 100vh;
+    width: 100%;
+    padding: 1vw;
+  }
+  .nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(10px);
+  }
+  .nav .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav .logo img{
+    height: 100px;
+    width: 100px;
+  }
+  .nav .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav button{
+    height: 36px;
+    width: 120px;
+    background-color: rgb(6, 110, 206);
+    padding: 10px 20px;
+    border: 1px solid rgb(6, 110, 206);
+    color: white;
+    border-radius: 3px;
+  }
+.nav .links a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+}
+.nav .links a:hover{
+    color: orangered;
+    transition: all 0.5s ease-in;
+}
+.nav button:hover{
+    background: transparent;
+    color: rgb(6, 110, 206);
+    transition: all 0.3s ease-in;
+}
+.section1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 2vh;
+}
+.section1 .title{
+    width: 60vw;
+    font-size: 24px;
+    text-align: center;
+}
+.section1 p{
+    color: black;
+}
+.section1 .buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.section1 .buttons button{
+    height: 36px;
+    width: 120px;
+    border-radius: 3px;
+}
+.section1 .buttons #button1{
+    color : black;
+    background-color: #fec4af;
+    border: 1px solid #fc7341;
+}
+.section1 .buttons #button2{
+    color : black;
+    background-color: #B7EDDD;
+    border: 1px solid #5ed6b3;
+}
+.section1 .buttons #button1:hover{
+    background: transparent;
+    transition: all 0.3s ease-in;
+}
+.section1 .buttons #button2:hover{
+    background: transparent;
+    transition: all 0.3s ease-in;
+}
+.section2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+.boxes{
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40vh;
+}
+.box{
+    width: 20%;
+}
+.box p{
+    color: black;
+}
+.box a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+    font-weight: bold;
+}
+.box img:hover{
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
+}
+.box a:hover{
+    color: orangered;
+    transition: all 0.3s ease-in;
+}
+@media screen and (max-width :600px){
+    .boxes{
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .box{
+        width: 100%;
+    }
+}
