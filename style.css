@@ -52,6 +52,12 @@ html,body{
   color: white;
   border-radius: 5px;
 }
+
+.nav #open{
+  display: none;
+  visibility: hidden;
+  font-size: 2rem;
+}
 .nav .links a{
   text-decoration: none;
   color: black;
@@ -122,7 +128,7 @@ html,body{
   flex-direction: column;
   gap: 3vh;
 }
-.boxes{
+.section2 .boxes{
   width: 100%;
   padding: 16px;
   display: flex;
@@ -130,29 +136,29 @@ html,body{
   align-items: center;
   height: 40vh;
 }
-.box{
+.section2 .boxes .box{
   width: 20%;
 }
-.box p{
+.section2 .boxes .box p{
   color: black;
 }
-.box a{
+.section2 .boxes .box a{
   text-decoration: none;
   color: black;
   opacity: 0.8;
   font-weight: bold;
 }
-.box img:hover{
+.section2 .boxes .box img:hover{
   scale: 1.2;
   transition: all 0.5s ease-in-out;
 }
-.box a:hover{
+.section2 .boxes .box a:hover{
   color: orangered;
   transition: all 0.3s ease-in;
 }
 .section3, .section4{
     height: 70vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,16 +169,15 @@ html,body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
 }
 .section3 .boxes1 .box1{
-    width: 30vw;
+    width: 30%;
 }
 .section4 .boxes1 .box2{
-    width: 30vw;
+    width: 30%;
 }
 .section4 .boxes1{
-    gap: 10vw 
+    gap: 10vw;
 }
 .section4 #button{
   border: 1px solid rgb(6, 110, 206);
@@ -186,30 +191,156 @@ html,body{
   background: transparent;
   transition: all 0.5s ease-in;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width :600px){
-  .boxes{
-      width: 100%;
-      flex-direction: column;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-  }
-  .box{
-      width: 100%;
-  }
+.overlay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 0;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  gap: 16px;
+  transition: all 0.6s ease-out;
+  visibility: hidden;
 }
+.openmenu{
+  display: flex;
+  width: 30%;
+  transition: all 0.6s ease-in;
+  visibility: visible;
+  z-index: 1000;
+}
+#overlay a{
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+
+}
+#overlay a:hover{
+  color: #fc7341;
+  transition: all 0.3s ease-in;
+}
+#overlay #close{
+  height: 30px;
+  width: 100px;
+  background-color: #066ece;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #066ece;
+}
+#overlay #close:hover{
+  background: transparent;
+  transition: all 0.5s ease-in;
+  color: #066ece;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width :700px) { 
+  .main{
+     width: 100%;
+  }
+  .nav{
+    justify-content: space-between;
+  }
+  .nav #open{
+     display: block;
+     visibility: visible;
+     padding-right: 20px;
+  }
+  .nav .logo{
+    font-size: 14px;
+  }
+  .nav .logo img{
+    height: 50px;
+    width: 50px;
+  }
+  .nav .links{
+     display: none;
+     visibility: hidden;
+  }
+  .nav .btn1{
+     visibility: hidden;
+  }
+  .section1{
+     height: 70vh;
+  }
+  .section1 .title h1{
+     font-size: 30px;
+  }
+  .section1 img{
+     width: 100%;
+  }
+  .section2{
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     font-size: 20px;
+  }
+  .section2 .boxes{
+     display: flex;
+     flex-direction: column;
+     font-size: 16px;
+     width: 100%;
+     
+  }
+  .boxes{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .section2 .boxes .box{
+    width: 100%;
+  }
+  
+  .btn1{
+     display: none;
+     visibility: hidden;
+  }
+  .section3{
+    height: 80Vh;
+  }
+  .section3 .boxes1{
+     display: flex;
+     flex-direction: column;
+     padding: 0%;
+     width: 100%;
+  }
+  .section3 .boxes1 .box1, .box2{
+    width: 100%;
+  }
+  .section3 .boxes1 .box2{
+    padding: 0px;
+  }
+  .section3 .boxes1 .box1 h1{
+     font-size: 30px;
+  }
+  .section3 .boxes1 .box2 img{
+     width: 100%;
+  }
+  .section4{
+     height: 80vh;
+  }
+  .section4 .boxes1{
+     display: flex;
+     flex-direction: column;
+  }
+  .section4 .boxes1 .box2{
+    width: 100%;
+  }
+ }
